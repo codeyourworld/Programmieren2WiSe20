@@ -11,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -91,8 +92,9 @@ public class GameFrameWork {
 			public void run() {
 				long offset = System.currentTimeMillis()-time;				
 				time = System.currentTimeMillis();
-//				System.out.println(offset);
-				for (ITickableListener tickable : ticks) {
+
+				for (Iterator<ITickableListener>iterator = ticks.iterator(); iterator.hasNext();) {
+					ITickableListener tickable = iterator.next();
 					tickable.tick(offset);
 					
 				}
@@ -107,7 +109,9 @@ public class GameFrameWork {
 
 			@Override
 			public void keyReleased(KeyEvent event) {
-				for (IKeyboardListener keys : keyInputs) {
+				for (Iterator<IKeyboardListener> iterator = keyInputs.iterator(); iterator.hasNext();) {
+					IKeyboardListener keys = iterator.next();
+
 					for (int key : keys.getKeys()) {
 						if (event.getKeyCode() == key) {
 							keys.keyDown(key);
@@ -121,7 +125,8 @@ public class GameFrameWork {
 
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				for (IMouseListener mouse : mouseInputs) {
+				for (Iterator<IMouseListener> iterator = mouseInputs.iterator(); iterator.hasNext();) {
+					IMouseListener mouse = iterator.next();
 					mouse.mouseClicked();
 				}
 
