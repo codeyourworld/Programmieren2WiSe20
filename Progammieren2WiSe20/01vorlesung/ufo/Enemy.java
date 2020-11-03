@@ -2,11 +2,13 @@ package ufo;
 
 import java.util.Random;
 
-public class Enemy {
+import view.IGameObject;
+
+public class Enemy implements IGameObject{
 
 	private float x;
 	private float y;
-	private float velocityX = 0.4f;
+	private float velocityX = 1.9f;
 	private int height;
 	private int width;
 	private int counterShots = 7;
@@ -80,7 +82,7 @@ public class Enemy {
 		return width;
 	}
 
-	public String getImage() {
+	public String getImagePath() {
 		return image;
 	}
 	

@@ -32,4 +32,6 @@ public class Draw implements ITickableListener {
 		rect.setX((int)(rect.getX() + 0.2*elapsedTime));
 		
 	}
+
+
 }

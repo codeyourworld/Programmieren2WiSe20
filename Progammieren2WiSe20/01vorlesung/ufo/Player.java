@@ -1,6 +1,8 @@
 package ufo;
 
-public class Player {
+import view.IGameObject;
+
+public class Player implements IGameObject{
 
 	// formatieren strg shift f
 	private int maxMunition = 5;
@@ -11,11 +13,11 @@ public class Player {
 	private int height;
 	private String image;
 	private int health;
-	private int munition;
+	private int munition = maxMunition;
 	private int score;
 
 	// alt shift s
-	public Player(float x, float y, int width, int height, String image) {
+	public Player(int x, int y, int width, int height, String image) {
 		super();
 		this.x = x;
 		this.y = y;
@@ -82,12 +84,12 @@ public class Player {
 		this.score = score;
 	}
 
-	public float getX() {
-		return x;
+	public int getX() {
+		return (int)x;
 	}
 
-	public float getY() {
-		return y;
+	public int getY() {
+		return (int)y;
 	}
 
 	public float getSpeedX() {
@@ -102,7 +104,7 @@ public class Player {
 		return height;
 	}
 
-	public String getImage() {
+	public String getImagePath() {
 		return image;
 	}
 

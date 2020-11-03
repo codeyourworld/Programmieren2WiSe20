@@ -1,6 +1,8 @@
 package ufo;
 
-public class Bullet {
+import view.IGameObject;
+
+public class Bullet implements IGameObject {
 
 	private float x;
 	private float y;
@@ -10,7 +12,7 @@ public class Bullet {
 	private String image;
 	private boolean fromPlayer = true;
 
-	public Bullet(float x, float y, int width, int height, String image) {
+	public Bullet(int x, int y, int width, int height, String image) {
 		super();
 		this.x = x;
 		this.y = y;
@@ -43,12 +45,12 @@ public class Bullet {
 		this.speedY = speedY;
 	}
 
-	public float getX() {
-		return x;
+	public int getX() {
+		return (int)x;
 	}
 
-	public float getY() {
-		return y;
+	public int getY() {
+		return (int)y;
 	}
 
 	public int getWidth() {
@@ -59,7 +61,7 @@ public class Bullet {
 		return height;
 	}
 
-	public String getImage() {
+	public String getImagePath() {
 		return image;
 	}
 
