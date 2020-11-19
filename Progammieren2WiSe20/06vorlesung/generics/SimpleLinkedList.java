@@ -1,6 +1,5 @@
 package generics;
 
-import java.lang.reflect.InaccessibleObjectException;
 
 public class SimpleLinkedList<T> {
 
