@@ -1,7 +1,5 @@
 package generics;
 
-import java.util.LinkedList;
-
 public class SimpleLinkedListMain {
 
 	public static void main(String[] args) {
