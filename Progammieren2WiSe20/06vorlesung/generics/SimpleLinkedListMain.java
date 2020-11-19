@@ -13,11 +13,11 @@ public class SimpleLinkedListMain {
 		}
 		
 		System.out.println(list.size());
-		
-		System.out.println(list.get(8));
-//		for(int i = 0; i < list.size(); i++) {
-//			System.out.println(list.get(i));
-//		}
+		list.remove(0);
+//		System.out.println(list.get(8));
+		for(int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
 		
 	}
 }
