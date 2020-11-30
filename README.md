@@ -9,20 +9,19 @@ Der Code aus der Vorlesung Programmieren 2 wird hier hochgeladen.
 
 Inhalte der Vorlesung sind:
 
-    JUnit-Tests
-    Regex
+    JUnit-Tests, Parametrisierte Test und Mocken
     Datenstrukturen / Generics
     in Dateien schreiben / aus Dateien lesen
     Exceptions
     Threads
-    Sockets
+    Netzwerkprogrammierung
     Android Views
     ConstraintLayout
     Listener
     RecyclerView
-    Animation
-    Intents
     MVC
+    Intents
+    Animation
     
 
 Viel Spaß!
